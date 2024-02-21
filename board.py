@@ -3,9 +3,10 @@ import puzzle_generator
 def empty_board():
     
     board = puzzle_generator.generate_solution()
+    hidden = puzzle_generator.hide_numbers(board)
     
     print("+-----------------------+")
-    for i, row in enumerate(board):
+    for i, row in enumerate(hidden):
         if i != 0 and i % 3 == 0:
             print("+-----------------------+")
         for j, column in enumerate(row):
